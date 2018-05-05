@@ -5,7 +5,8 @@ class RoutesController < ApplicationController
     
     
     def index
-        
+
+        @routes = Route.all
         
     end
     
@@ -19,7 +20,8 @@ class RoutesController < ApplicationController
     end
     
     def create 
-        @route = Route.new(route_params)
+        @area = Area.find(route_params[:area_id])
+        @route = @area.routes.new(route_params)
         if @route.save
             redirect_to routes_path
         else 
@@ -32,7 +34,7 @@ class RoutesController < ApplicationController
     end
     
     def update
-        @route = ROute.find(params[:id])
+        @route = Route.find(params[:id])
         if @route.update_attributes(route_params)
             redirect_to routes_path
         else

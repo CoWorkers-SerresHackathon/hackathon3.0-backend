@@ -1,15 +1,11 @@
-<div align= "center">
-    <%= form_with model: @route, local: true do |form| %>
-        
+<%= simple_form_for @route do |f| %>
+    <%= f.input :area, location: 'Serres' %>
+        <div class="form-group">
+            <%= f.label :area %>
+            <div class="field">
+                <%= f.area_select(:area_id, Area.all, :id, :location) %>
+            </div>
 
-        <div class="field">
-            <%= form.label :distance %>
-            <%= form.text_field :distance %>
         </div>
-
-        <div>
-            <%= form.submit %>
-        </div>
-
-    <% end %>
-</div>    
+        <%= f.button :submit %>
+<% end %>
