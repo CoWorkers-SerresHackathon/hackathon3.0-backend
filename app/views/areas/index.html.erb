@@ -1,0 +1,26 @@
+<div align= "center">
+        <h1>Areas</h1>
+
+        <table class="row-border" frame="void" rules="rows" cellspacing="1">
+            <tr>
+                <th colspan=5>Areas info</th>
+            </tr>
+
+            <% @areas.each do |store| %>
+            <tr>
+                <td> <%= area.location %> <%= area.longtitude %> <%= area.latitude %> </td>
+                
+            </tr>
+            <% end %>
+            
+        </table>
+          
+        
+
+        <%= link_to 'Create', new_area_path , class: "btn btn-lg btn-primary" %> 
+    
+
+
+
+
+    </div>
