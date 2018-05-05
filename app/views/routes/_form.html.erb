@@ -1,0 +1,15 @@
+<div align= "center">
+    <%= form_with model: @route, local: true do |form| %>
+        
+
+        <div class="field">
+            <%= form.label :distance %>
+            <%= form.text_field :distance %>
+        </div>
+
+        <div>
+            <%= form.submit %>
+        </div>
+
+    <% end %>
+</div>    

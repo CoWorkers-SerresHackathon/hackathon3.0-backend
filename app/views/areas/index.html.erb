@@ -9,7 +9,7 @@
             <% @areas.each do |area| %>
                 <tr>
                     <td>
-                        <%= area.location %> | <%= area.latitude %> | <%= area.longtitude %>
+                        <%= area.location %>  <%= area.latitude %>  <%= area.longtitude %>
                     </td>
                     
                     <td><%= link_to edit_area_path([:id]), class: "btn btn-default" do %>
@@ -31,3 +31,7 @@
         <%= link_to 'Create', new_area_path , class: "btn btn-lg btn-primary" %> 
     
 </div>
+
+
+    <%= link_to 'Routes', routes_path %>
+
