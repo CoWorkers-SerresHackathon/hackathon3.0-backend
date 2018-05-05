@@ -1,0 +1,24 @@
+<div class= "center jumbotron">
+    <h1>Edit Store</h1>
+    <%= form_with model: @area, local: true do |form| %>
+        <div class="field">
+            <%= form.label :location %><br>
+            <%= form.text_field :location %>
+        </div>
+
+        <div class="field">
+            <%= form.label :longtitude %><br>
+            <%= form.text_field :longtitude %>
+        </div>
+    
+        <div class="field">
+            <%= form.label :latitude %><br>
+            <%= form.text_field :latitude %>
+        </div>
+
+        <div>
+            <%= form.submit %>
+        </div>
+    <% end %>
+    
+</div>

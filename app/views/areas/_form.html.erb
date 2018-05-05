@@ -1,0 +1,23 @@
+<div align= "center">
+    <%= form_with model: @area, local: true do |form| %>
+        <div class="field">
+            <%= form.label :location %><br>
+            <%= form.text_field :location %>
+        </div>
+
+        <div class="field">
+            <%= form.label :longtitude %>
+            <%= form.text_field :longtitude %>
+        </div>
+
+        <div class="field">
+            <%= form.label :latitude %>
+            <%= form.text_field :latitude %>
+        </div>
+
+        <div>
+            <%= form.submit %>
+        </div>
+
+    <% end %>
+</div>    

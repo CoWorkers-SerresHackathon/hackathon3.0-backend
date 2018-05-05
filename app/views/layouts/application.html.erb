@@ -13,15 +13,15 @@
        <nav class="navbar navbar-inverse navbar-fixed-top bg-inverse", style="margin-bottom: 0px;">
             <div class="container">  
               
-                <a class="navbar-brand" href="#">Areas Routes</a>
+                <a class="navbar-brand" >Areas Routes</a>
             </div>
              
             <div class="center jumbotron">  
                    
-                <% if @current_user %>
+                <% if current_user %>
                   Signed in as <%= current_user.username %> | <%= link_to "Logout", '/logout' %> 
                 <% else %>
-                  <p>Welcome back Admin</p>  
+                  
                 <% end %>  
 
                 <%= yield %>
